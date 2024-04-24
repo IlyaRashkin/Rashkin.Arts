@@ -1,0 +1,82 @@
+:root {
+    --general-color-white: #FFFFFF;
+    --general-color-black: #000000;
+    --general-color-red: #FF0000;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: "Montserrat", "Arial", sans-serif;
+    line-height: 160%;
+    color: var(--general-color-black);
+    background-color: var(--general-color-white);
+}
+
+.body--opened-menu {
+    overflow: hidden;
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.container {
+    max-width: 1310px;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100%;
+}
+
+.button {
+    color: var(--general-color-white);
+    background-color: var(--general-color-red);
+    padding: 19px 53px;
+    text-transform: uppercase;
+    max-width: 255px;
+    position: relative;
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+    transition: all .4s;
+}
+
+.button a {
+    position: relative;
+    z-index: 2;
+}
+
+.button:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--general-color-white);
+    transition: all .4s;
+}
+
+.button:hover {
+    transition: all .4s;
+    color: #212020;
+    border: solid 1.5px #212020;
+}
+
+
+.button:hover:after {
+    transition: all .4s;
+    width: 100%;
+}
+
